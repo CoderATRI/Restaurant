@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sunrise Dine | Restaurant</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #fff7ea;
+            color: #333;
+        }
+
+        .header {
+            background-color: #e67300;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .nav {
+            background-color: #ffb366;
+            text-align: center;
+            padding: 8px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #4d2600;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 80%;
+            margin: 15px auto;
+            background: #fff;
+            border: 1px solid #ffd9b3;
+            padding: 15px;
+        }
+
+        h2 {
+            color: #e67300;
+            border-bottom: 2px solid #ffd9b3;
+            padding-bottom: 5px;
+        }
+
+        /* UPDATED IMAGE BOX (NO FIXED SIZE) */
+        .image-box {
+            width: 100%;
+            border: 2px dashed #ff9900;
+            background: #fffaf2;
+            text-align: center;
+            padding: 10px;
+        }
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ffcc99;
+        }
+
+        th {
+            background-color: #ffe0bf;
+            color: #4d2600;
+        }
+
+        td {
+            background-color: #fffaf2;
+        }
+
+        th, td {
+            padding: 6px;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 8px;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+        }
+
+        input, select, textarea {
+            padding: 4px;
+            border: 1px solid #ffcc99;
+            width: 60%;
+        }
+
+        input[type="submit"] {
+            width: auto;
+            background-color: #e67300;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .review {
+            border: 1px solid #ffcc99;
+            background-color: #fffaf2;
+            padding: 8px;
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffb366;
+            color: #4d2600;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Sunrise Dine</h1>
+        <p>Delicious Food • Cozy Atmosphere • Friendly Service</p>
+    </div>
+
+    <div class="nav">
+        <a href="#home">Home</a>
+        <a href="#image">Image</a>
+        <a href="#menu">Menu</a>
+        <a href="#reservation">Reservation</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- UPDATED IMAGE SECTION -->
+    <div class="container" id="image">
+        <h2>Restaurant Image</h2>
+
+        <div class="image-box">
+            <!-- Example paste here: <img src="LINK"> -->
+            <img src="data:image/jpeg;base64,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w9a7sKAYfMxtWzK54vTtgItd8TH3AHrDbD3K2Wud6PU/lj7SNJVFU8U9CtkUVTxXdCRsey4G/H1nso/qctqrVXA34+s9lH9TltVfT0eEeLW50REXVyEREBERAREQEREBERAREQEREBERAREQEREBaq4cePhnRV/OnW1Vrvha0frax1AaWB0+pFTrMr4mZC8w5eO4Xvldu5lz1ZvhdnXRsmc3eBjVUS4DQ3HvRJetpe2uQ0Rx/wBFm62l7a+f6c+nr8se4siVkSxI0U0g9Gm62l7a5jRjSL0ebraXtrPTn0zfHuM9Eqol5oaOaR+Yn62k7a5DR/STzM/W0naWenPpn8e49dErIl4cYHpMP6qo62k7S5jB9J/N1HW0naWejPpP53GwIlXEtbDC9KR+Co62j7S5jDtKvJqeto+0noz6ZtO42jGuMpWshRaV81T1tH2l9NDpXzVPW0faT0Z9M8Z3GwZFJKV4c4dpT5NT1tH2lxOFaT+RUdbSdpPRn03adx66VSSrzRwbSXzdR1tJ2l8OB6Sean62k7SejPpv53GblUkqxp0f0i8zP1tL2lxOjekHmJutpe2t9OfTd8e4plUkiHRjH/R5utpe2uJ0Ux30WXraXtrfTl0ryx7iaVRVPFd0LKHRHG/RZetpu2uLtDMZOw0ch/8ArTdtbNLLpvnj2z/A14+s9lF9TltZa84MNH62kmqn1NO6FskcbWEvidmIcSR4LjzrYa9+jLMJu8etd8/wREXVzEREBEUdRiDWOyFrydlrAbb821BYix/fVm7JLfmyj7ocVZuyS35so+6DIIsf32Za+SS3PlFvmqaSqEgLmhwANvCttKDvREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAWHxOYa5mw/q7ZnAe+3886IglbNe4cC0WAGUEm2a52lcteA4u8Jx2NaALZW823+dqIg4Pms3K0H8Q2g7AVlcHkBjDbWLDYjnvtuiILkREH/2Q==">
+        </div>
+    </div>
+
+    <!-- MENU SECTION -->
+    <div class="container" id="menu">
+        <h2>Our Menu</h2>
+
+        <h3>Starters</h3>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Price (₹)</th>
+            </tr>
+            <tr>
+                <td>Tomato Soup</td>
+                <td>Fresh tomato soup with herbs</td>
+                <td>120</td>
+            </tr>
+            <tr>
+                <td>Paneer Tikka</td>
+                <td>Grilled paneer with spices</td>
+                <td>220</td>
+            </tr>
+        </table>
+
+        <h3>Main Course</h3>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Price (₹)</th>
+            </tr>
+            <tr>
+                <td>Veg Thali</td>
+                <td>Complete Indian meal</td>
+                <td>250</td>
+            </tr>
+            <tr>
+                <td>Paneer Butter Masala</td>
+                <td>Creamy paneer gravy</td>
+                <td>280</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- RESERVATION -->
+    <div class="container" id="reservation">
+        <h2>Online Reservation</h2>
+
+        <form>
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text">
+            </div>
+
+            <div class="form-group">
+                <label>Phone:</label>
+                <input type="text">
+            </div>
+
+            <div class="form-group">
+                <label>People:</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3-4</option>
+                    <option>5+</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Date:</label>
+                <input type="date">
+            </div>
+
+            <div class="form-group">
+                <label>Time:</label>
+                <input type="time">
+            </div>
+
+            <div class="form-group">
+                <label>Message:</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <input type="submit" value="Book Table">
+        </form>
+    </div>
+
+    <!-- REVIEWS -->
+    <div class="container" id="reviews">
+        <h2>Customer Reviews</h2>
+
+        <div class="review"><b>Amit Sharma:</b> Amazing food and quick service.</div>
+        <div class="review"><b>Sneha Verma:</b> Paneer dishes are the best here!</div>
+        <div class="review"><b>Rahul Singh:</b> Great family restaurant.</div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="container" id="contact">
+        <h2>Contact Us</h2>
+        <p><b>Email:</b> info@sunrisedine.com</p>
+        <p><b>Phone:</b> +91 9876543210</p>
+        <p><b>Address:</b> MG Road, New City</p>
+    </div>
+
+    <div class="footer">
+        © 2025 Sunrise Dine · Fictional Restaurant
+    </div>
+
+</body>
+
+
+
+</html>
